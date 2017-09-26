@@ -15,24 +15,21 @@ class ThreadHTTPServer (ThreadingMixIn, http.server.HTTPServer):
 memory = {}
 
 form = '''<!DOCTYPE html>
-<style>
-.content {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family:sans-serif;
-    font-size:16px;
-    margin-top: 100px;
+<meta charset="utf-8">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     
-}
-</style>
-<div class = "content">
+<div class = "container">
 <title>Bookmark Server</title>
 <h1>Bookmark Server</h1>
 <h5>Instructions: enter in a full URI with a shortened
 name (for example, "https://www.github.com" and "github")
-and click "Save it!" now, add the shortened name to the path of this website
-(to continue the example, john-potts-python-app.herokuapp.com/github)
+and click "Save it!"
+<br/>
+Next, add the shortened name to the path of this website
+(for example, john-potts-python-app.herokuapp.com/github)
 and see what happens!</h5>
 <br>
 <form method="POST">
