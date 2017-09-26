@@ -15,7 +15,26 @@ class ThreadHTTPServer (ThreadingMixIn, http.server.HTTPServer):
 memory = {}
 
 form = '''<!DOCTYPE html>
+<style>
+.content {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:sans-serif;
+    font-size:16px;
+    margin-top: 100px;
+    
+}
+</style>
+<div class = "content">
 <title>Bookmark Server</title>
+<h1>Bookmark Server</h1>
+<h5>Instructions: enter in a full URI with a shortened
+name (for example, "https://www.github.com" and "github")
+and click "Save it!" now, add the shortened name to the path of this website
+(to continue the example, john-potts-python-app.herokuapp.com/github)
+and see what happens!</h5>
+<br>
 <form method="POST">
     <label>Long URI:
         <input name="longuri">
@@ -31,6 +50,7 @@ form = '''<!DOCTYPE html>
 <pre>
 {}
 </pre>
+</div>
 '''
 
 
